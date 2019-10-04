@@ -2,6 +2,7 @@ package com.example.woo.myapplication;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -20,14 +21,17 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Locale;
 
-public class ListVieww extends Activity {
+public class ListVieww extends Activity implements View.OnClickListener{
     ListView listView;
   //  SingerAdapter adapter;
     ListViewAdapter adapter2;
     EditText editSearch;
+
+
 //
 //    ArrayList<ListViewItem> items = new ArrayList<ListViewItem>();
 
@@ -163,6 +167,10 @@ public class ListVieww extends Activity {
     }
 
 
+    @Override
+    public void onClick(View view) {
+
+    }
 
 
     @Override
@@ -214,7 +222,17 @@ public class ListVieww extends Activity {
         listView.setAdapter(adapter2);
 
 
+        //리스트뷰를 누르면 다른 액티비티로 넘어간다(실종자 상세 정보)
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                Intent intent = new Intent(getApplicationContext(),listVieww_popup.class);
 
+                Object putitem = adapter2.getItem(position);
+                intent.putExtra("selecteditem", (Serializable) putitem);
+                startActivity(intent);
+            }
+        });
         //검색어를 입력하면 검색이 가능하다.
         editSearch = (EditText)findViewById(R.id.EditText_Search);
 

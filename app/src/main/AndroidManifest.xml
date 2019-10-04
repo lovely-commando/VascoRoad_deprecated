@@ -19,6 +19,7 @@
         </activity>
 
         <activity android:name=".ListVieww"></activity>
+        <activity android:name=".listVieww_popup"></activity>
 
     </application>
 
