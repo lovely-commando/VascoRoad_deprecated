@@ -26,6 +26,10 @@ public class ListViewItem implements Serializable {
         this.desc = desc;
     }
 
+    public ListViewItem() {
+
+    }
+
     public int getResId()
     {
         return resId;
@@ -69,6 +73,7 @@ public class ListViewItem implements Serializable {
     public void setDesc(String desc) {
         this.desc = desc;
     }
+
 }
 
 

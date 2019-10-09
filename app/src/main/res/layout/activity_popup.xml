@@ -134,46 +134,46 @@
             android:id="@+id/TextView_Characteristic"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="인도네시아 엊쩌구"
+            android:text="엊쩌구저쩌구"
             android:textSize="17dp"
 
             >
 
         </TextView>
-    </LinearLayout>
 
-    <LinearLayout
+    </LinearLayout>
+    <Button
+        android:id="@+id/Button_makeroom"
+        android:layout_marginTop="7dp"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/button_background2"
+        android:text="방 생성"
+        android:layout_gravity="center"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        />
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp"
-        >
-        <Button
-            android:layout_marginTop="12dp"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:background="@drawable/button_background2"
-            android:text="방 목록"
-            android:textColor="#ffffff"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:layout_weight="10"
-            android:layout_marginRight="40dp"
-            android:layout_marginLeft="40dp"
-            />
-        <Button
-            android:layout_marginRight="40dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="12dp"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:background="@drawable/button_background2"
-            android:text="방 생성"
-            android:textColor="#ffffff"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:layout_weight="10"
-            />
-    </LinearLayout>
+        android:layout_height="wrap_content"
+        android:text="수색 진행 현황"
+        android:layout_marginTop="12dp"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        android:paddingLeft="25dp"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:background="@color/colorGray"
+        />
+    <ListView
+        android:id="@+id/listView_popup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+
+        />
 
     </LinearLayout>
+
