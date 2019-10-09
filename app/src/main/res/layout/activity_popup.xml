@@ -153,6 +153,7 @@
         android:textColor="#ffffff"
         android:textStyle="bold"
         android:textSize="15dp"
+        android:onClick="mOnClick"
         />
     <TextView
         android:layout_width="match_parent"

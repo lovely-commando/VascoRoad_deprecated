@@ -22,6 +22,16 @@
         <activity android:name=".listVieww_popup"></activity>
         <activity android:name=".EmptyRoom"></activity>
 
+        <activity android:name=".maps.RegisterNewMapActivity" android:theme="@style/AppTheme"/>
+        <activity android:name=".maps.RegisterMapDetailsActivity" android:theme="@style/AppTheme"/>
+        <activity android:name=".maps.MapActivity" android:theme="@style/AppTheme"/>
+        <activity android:name=".maps.PopUpActivity" android:theme="@android:style/Theme.Dialog" />
+        <activity android:name=".maps.UnusualRecordActivity" android:theme="@android:style/Theme.Dialog" />
+
+        <meta-data
+            android:name="com.naver.maps.map.CLIENT_ID"
+            android:value="qir3dsnn0a"/>
+
     </application>
 
 </manifest>

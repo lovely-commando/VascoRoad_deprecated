@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,11 +13,18 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+
+import com.example.woo.myapplication.maps.RegisterNewMapActivity;
+import com.naver.maps.geometry.LatLng;
+
 import java.util.ArrayList;
 
 public class listVieww_popup extends Activity implements View.OnClickListener{
     ListView listView;
     ListAdapter adapter;
+    private final LatLng missingPoint = new LatLng(35.886880, 128.608543); // 임시
+
 
     public class ListAdapter extends BaseAdapter
     {
@@ -135,4 +141,10 @@ public class listVieww_popup extends Activity implements View.OnClickListener{
 
     }
 
+    public void mOnClick(View v){
+        Intent intent = new Intent(this, RegisterNewMapActivity.class);
+        intent.putExtra("missing_lat", missingPoint.latitude);
+        intent.putExtra("missing_long", missingPoint.longitude);
+        startActivityForResult(intent, 1);
+    }
 }
